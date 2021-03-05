@@ -14,7 +14,7 @@ function randomDestination(randomCity){ // needs to be able to randomly reselect
     return funCity;
 } //function gives random city, if user does not like, create if statement later and then rerun function.
 let theCity = randomDestination(destination);
-console.log(theCity);       
+     
 
 //commit done
 
@@ -26,10 +26,9 @@ function randomRestaurant(randomEats){
     let yummyFood = restaurant[Math.floor(restaurant.length * Math.random())];
     return yummyFood;
 }
-
 let whatFood = randomRestaurant(restaurant);
-console.log(whatFood);
 
+//commit done
 //create random transportation
 //needs function, create array first
 let transportation = ["Car", "Bus", "Motorcycle", "Helicopter"];
@@ -38,10 +37,9 @@ function randomTransportation(randomWheels){
     let hotWheels = transportation[Math.floor(transportation.length * Math.random())];
     return hotWheels;
 }
-
 let myRide = randomTransportation(transportation);
-console.log(myRide);
 
+//commit done
 //random entertainment
 //array, function, create random statement in function, check to make sure wording and sequenc is correct
 //return new variable in function
@@ -53,6 +51,28 @@ function randomEntertainment(randomFun){
     let whatToDo = entertainment[Math.floor(entertainment.length * Math.random())];
     return whatToDo;
 }
-
 let thisWillBeFun = randomEntertainment(entertainment);
+
+//commit done
+// have to prompt user to ask if ready for a great day
+//once user says yes, run all four functions
+// If statement for if user is not happen with results, run again
+//else statment to include that user is happen with choices and will print that day trip is complete
+
+let userInput = prompt("Are you ready for a fun day?!?");
+
+function askUserForFunDay(funDayChoice){
+    if(userInput === "yes"){
+    console.log("Generating your fun, exciting day now...");
+    }else{
+    console.log("You suck");
+    }
+}
+
+askUserForFunDay(userInput);
+console.log(theCity);  
+console.log(whatFood);
+console.log(myRide);
 console.log(thisWillBeFun);
+ //while loop would be better bc idk how many times user will want to change selection
+ 
