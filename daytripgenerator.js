@@ -13,7 +13,7 @@ function randomDestination(randomCity){ // needs to be able to randomly reselect
     let funCity = destination[Math.floor(destination.length * Math.random())];
     return funCity;
 } //function gives random city, if user does not like, create if statement later and then rerun function.
-let theCity = randomDestination(destination);
+//let theCity = randomDestination(destination);
      
 
 //commit done
@@ -26,7 +26,7 @@ function randomRestaurant(randomEats){
     let yummyFood = restaurant[Math.floor(restaurant.length * Math.random())];
     return yummyFood;
 }
-let whatFood = randomRestaurant(restaurant);
+//let whatFood = randomRestaurant(restaurant);
 
 //commit done
 //create random transportation
@@ -37,7 +37,7 @@ function randomTransportation(randomWheels){
     let hotWheels = transportation[Math.floor(transportation.length * Math.random())];
     return hotWheels;
 }
-let myRide = randomTransportation(transportation);
+//let myRide = randomTransportation(transportation);
 
 //commit done
 //random entertainment
@@ -51,7 +51,7 @@ function randomEntertainment(randomFun){
     let whatToDo = entertainment[Math.floor(entertainment.length * Math.random())];
     return whatToDo;
 }
-let thisWillBeFun = randomEntertainment(entertainment);
+//let thisWillBeFun = randomEntertainment(entertainment);
 
 //commit done
 // have to prompt user to ask if ready for a great day
@@ -61,31 +61,35 @@ let thisWillBeFun = randomEntertainment(entertainment);
 
 let userInput = prompt("Are you ready for a fun day?!?");
 
-function askUserForFunDay(funDayChoice){
-    let satisfaction = prompt("Sound good to you?");
-    if(userInput === "yes"){
+
+if(userInput === "yes"){
     console.log("Generating your fun, exciting day now...");
-    console.log("You will be going to: " + theCity);  
-    console.log("What you will be eating is: " + whatFood);
-    console.log("How you'll be getting there: " + myRide);
-    console.log("While you're there, you'll be doing this: " + thisWillBeFun);
-    console.log(satisfaction);
-        
-    }else{
+    console.log("You will be going to: " + randomDestination(destination));  
+    console.log("What you will be eating is: " + randomRestaurant(restaurant));
+    console.log("How you'll be getting there: " + randomTransportation(transportation));
+    console.log("While you're there, you'll be doing this: " + randomEntertainment(entertainment));
+    let satisfaction = prompt("Sound good to you?");
+while(satisfaction !== "yes"){
+    //other 3 random functions
+    console.log("Generating your fun, exciting day now...");
+    console.log("You will be going to: " + randomDestination(destination));  
+    console.log("What you will be eating is: " + randomRestaurant(restaurant));
+    console.log("How you'll be getting there: " + randomTransportation(transportation));
+    console.log("While you're there, you'll be doing this: " + randomEntertainment(entertainment));
+    //check for satisfaction again
+    satisfaction = prompt("Sound good to you?");
+ }
+}
+else{
         console.log("You suck"); // keep this
     }
-        while(satisfaction !== "yes"){
-            console.log("Generating your fun, exciting day now...");
-            console.log("You will be going to: " + theCity);  
-            console.log("What you will be eating is: " + whatFood);
-            console.log("How you'll be getting there: " + myRide);
-            console.log("While you're there, you'll be doing this: " + thisWillBeFun); 
-            
-            console.log("Awesome! Have fun.")
-        }
+let happyCamper = prompt ("Confirm? Yes or No");
+if(happyCamper === "yes"){
+        console.log("Confirmed! Have fun!");//how to get prompts to pause while user answers so they can see their options. printing out yes as well.
+}else{
+        console.log("Well, why not?");
 }
-
-askUserForFunDay(userInput);// ask the user if they wanna have fun day
+// ask the user if they wanna have fun day
 // create a function where user will  be asked if they like each individual thing (city, food, ride and fun)
 // if they do like it, it stays
 //if they dont like it, another random generation will have to be executed
