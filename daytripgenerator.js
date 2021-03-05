@@ -29,3 +29,15 @@ function randomRestaurant(randomEats){
 
 let whatFood = randomRestaurant(restaurant);
 console.log(whatFood);
+
+//create random transportation
+//needs function, create array first
+let transportation = ["Car", "Bus", "Motorcycle", "Helicopter"];
+
+function randomTransportation(randomWheels){
+    let hotWheels = transportation[Math.floor(transportation.length * Math.random())];
+    return hotWheels;
+}
+
+let myRide = randomTransportation(transportation);
+console.log(myRide);
