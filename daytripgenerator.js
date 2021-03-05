@@ -41,3 +41,18 @@ function randomTransportation(randomWheels){
 
 let myRide = randomTransportation(transportation);
 console.log(myRide);
+
+//random entertainment
+//array, function, create random statement in function, check to make sure wording and sequenc is correct
+//return new variable in function
+// create new variable to store function inside of and console log it
+
+let entertainment = ["Going clubbing", "Movies and then drinks", "Going to an indoor golf range", "Go sight seeing"];
+
+function randomEntertainment(randomFun){
+    let whatToDo = entertainment[Math.floor(entertainment.length * Math.random())];
+    return whatToDo;
+}
+
+let thisWillBeFun = randomEntertainment(entertainment);
+console.log(thisWillBeFun);
