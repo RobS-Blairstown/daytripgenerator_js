@@ -62,18 +62,39 @@ let thisWillBeFun = randomEntertainment(entertainment);
 let userInput = prompt("Are you ready for a fun day?!?");
 
 function askUserForFunDay(funDayChoice){
+    let satisfaction = prompt("Sound good to you?");
     if(userInput === "yes"){
     console.log("Generating your fun, exciting day now...");
+    console.log("You will be going to: " + theCity);  
+    console.log("What you will be eating is: " + whatFood);
+    console.log("How you'll be getting there: " + myRide);
+    console.log("While you're there, you'll be doing this: " + thisWillBeFun);
+    console.log(satisfaction);
+        
     }else{
-    console.log("You suck"); 
+        console.log("You suck"); // keep this
     }
+        while(satisfaction !== "yes"){
+            console.log("Generating your fun, exciting day now...");
+            console.log("You will be going to: " + theCity);  
+            console.log("What you will be eating is: " + whatFood);
+            console.log("How you'll be getting there: " + myRide);
+            console.log("While you're there, you'll be doing this: " + thisWillBeFun); 
+            
+            console.log("Awesome! Have fun.")
+        }
 }
 
-askUserForFunDay(userInput);
-console.log("You will be going to: " + theCity);  
-console.log("What you will be eating is: " + whatFood);
-console.log("How you'll be getting there: " + myRide);
-console.log("While you're there, you'll be doing this: " + thisWillBeFun); // will still generate the day even if user enters anything other than yes, need to fix that so if they put something in 
+askUserForFunDay(userInput);// ask the user if they wanna have fun day
+// create a function where user will  be asked if they like each individual thing (city, food, ride and fun)
+// if they do like it, it stays
+//if they dont like it, another random generation will have to be executed
+// console.log("You will be going to: " + theCity);  
+// console.log("What you will be eating is: " + whatFood);
+// console.log("How you'll be getting there: " + myRide);
+// console.log("While you're there, you'll be doing this: " + thisWillBeFun); // will still generate the day even if user enters anything other than yes, need to fix that so if they put something in 
                             // other than yes the options will not appear
  //while loop would be better bc idk how many times user will want to change selection
- 
+ //need to add random re-select, confirmation for complete once user likes input and display in the console
+
+
