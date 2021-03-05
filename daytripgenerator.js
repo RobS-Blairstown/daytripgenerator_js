@@ -65,14 +65,15 @@ function askUserForFunDay(funDayChoice){
     if(userInput === "yes"){
     console.log("Generating your fun, exciting day now...");
     }else{
-    console.log("You suck");
+    console.log("You suck"); 
     }
 }
 
 askUserForFunDay(userInput);
-console.log(theCity);  
-console.log(whatFood);
-console.log(myRide);
-console.log(thisWillBeFun);
+console.log("You will be going to: " + theCity);  
+console.log("What you will be eating is: " + whatFood);
+console.log("How you'll be getting there: " + myRide);
+console.log("While you're there, you'll be doing this: " + thisWillBeFun); // will still generate the day even if user enters anything other than yes, need to fix that so if they put something in 
+                            // other than yes the options will not appear
  //while loop would be better bc idk how many times user will want to change selection
  
